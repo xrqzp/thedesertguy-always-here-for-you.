@@ -1,3 +1,14 @@
+// DEBUG:
+console.log("✅ script.js is loaded successfully!");
+console.log("Running from:", window.location.href);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("✅ DOM is ready");
+    
+
+});
+
 // DOM Elements
 const quotesContainer = document.getElementById('quotes-container');
 const randomQuoteBtn = document.getElementById('random-quote-btn');
@@ -222,3 +233,4 @@ function setupEventListeners() {
 
 // Initialize the page when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
