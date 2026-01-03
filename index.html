@@ -3,215 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Nana ❤️</title>
-    <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #ffebee;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            background-image: radial-gradient(#ffcdd2 2px, transparent 2px);
-            background-size: 20px 20px;
-        }
-        
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            max-width: 400px;
-        }
-        
-        h1 {
-            color: #e91e63;
-            margin-bottom: 30px;
-        }
-        
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            position: relative;
-        }
-        
-        button {
-            padding: 10px 25px;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-        
-        #yesBtn {
-            background-color: #4caf50;
-            color: white;
-        }
-        
-        #noBtn {
-            background-color: #f44336;
-            color: white;
-            position: absolute;
-        }
-        
-        .hearts {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            top: 0;
-            left: 0;
-        }
-        
-        .heart {
-            position: absolute;
-            font-size: 20px;
-            color: #e91e63;
-            animation: float 3s ease-in-out infinite;
-            opacity: 0;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(20deg);
-                opacity: 0;
-            }
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        #message {
-            font-size: 24px;
-            color: #e91e63;
-            margin-top: 20px;
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-    </style>
+    <title>The Desert Guy - Always Here to Listen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏜️</text></svg>">
 </head>
 <body>
     <div class="container">
-        <h1>Nana, do you love me? ❤️</h1>
-        <div class="buttons">
-            <button id="yesBtn">Yes</button>
-            <button id="noBtn">No</button>
-        </div>
-        <div id="message" class="hidden">I knew it! I love you too! 😘💖</div>
-        <div class="hearts" id="hearts"></div>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <h1><i class="fas fa-cactus"></i> The Desert Guy</h1>
+                <p class="tagline">If you're lost, I am always here to listen</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active" data-section="home">Home</a></li>
+                    <li><a href="#" data-section="quotes">Quotes</a></li>
+                    <li><a href="#" data-section="about">About</a></li>
+                    <li><a href="#" data-section="share">Share</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero" id="home-section">
+                <div class="hero-content">
+                    <h2>In the silence of the desert, you can hear your own heart</h2>
+                    <p>Welcome to a space of warmth, understanding, and heartfelt wisdom.</p>
+                    <button class="cta-button" id="random-quote-btn">
+                        <i class="fas fa-heart"></i> Get a Random Quote
+                    </button>
+                </div>
+                <div class="desert-scene">
+                    <div class="sun"></div>
+                    <div class="dune dune-1"></div>
+                    <div class="dune dune-2"></div>
+                    <div class="dune dune-3"></div>
+                    <div class="cactus cactus-1"></div>
+                    <div class="cactus cactus-2"></div>
+                </div>
+            </section>
+
+            <!-- Featured Quote Section -->
+            <section class="featured-quote">
+                <div class="quote-box">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text" id="featured-quote">Sometimes the most profound listening happens in the quietest places. I'm here when you need an ear.</p>
+                    <p class="quote-author">— The Desert Guy</p>
+                </div>
+            </section>
+
+            <!-- Quotes Grid Section -->
+            <section class="quotes-grid" id="quotes-section">
+                <h2 class="section-title">Heartwarming Words</h2>
+                <div class="quotes-container" id="quotes-container">
+                    <!-- Quotes will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="about-section" id="about-section">
+                <div class="about-content">
+                    <h2 class="section-title">About The Desert Guy</h2>
+                    <div class="about-text">
+                        <p>Like a solitary cactus in the vast desert, I stand ready to offer shade and solace to weary travelers. In this busy world, we often need a quiet space to be heard without judgment.</p>
+                        <p>This website is a collection of heartfelt quotes, gentle reminders, and warm thoughts to brighten your day. Whether you're feeling lost, overwhelmed, or just in need of a moment of peace, know that you're not alone.</p>
+                        <p>My promise is simple: <strong>If you're lost, I am always here to listen.</strong></p>
+                    </div>
+                    <div class="about-icons">
+                        <div class="icon-item">
+                            <i class="fas fa-ear-listen"></i>
+                            <p>Listening Ear</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-hands-holding-heart"></i>
+                            <p>Heartfelt Support</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fas fa-sun"></i>
+                            <p>Warmth & Light</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Share Section -->
+            <section class="share-section" id="share-section">
+                <h2 class="section-title">Share Some Warmth</h2>
+                <div class="share-container">
+                    <div class="share-box">
+                        <i class="fas fa-share-alt share-icon"></i>
+                        <h3>Spread Positivity</h3>
+                        <p>Share these quotes with someone who might need a little extra light today.</p>
+                        <div class="share-buttons">
+                            <button class="share-btn" id="twitter-share">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </button>
+                            <button class="share-btn" id="copy-quote">
+                                <i class="fas fa-copy"></i> Copy Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="share-box">
+                        <i class="fas fa-lightbulb share-icon"></i>
+                        <h3>Submit Your Quote</h3>
+                        <p>Have a heartwarming quote or thought to share? Send it our way!</p>
+                        <textarea id="quote-input" placeholder="Your heartwarming quote..."></textarea>
+                        <button class="submit-btn" id="submit-quote">
+                            <i class="fas fa-paper-plane"></i> Submit
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Daily Affirmation -->
+            <section class="affirmation-section">
+                <div class="affirmation-box">
+                    <h3><i class="fas fa-star"></i> Daily Affirmation</h3>
+                    <p id="daily-affirmation">You are stronger than you know, kinder than you realize, and more loved than you can imagine.</p>
+                    <button class="refresh-btn" id="refresh-affirmation">
+                        <i class="fas fa-redo"></i> New Affirmation
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-cactus"></i> The Desert Guy</h3>
+                    <p>Always here to listen</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/thedesertguy/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">&copy; <span id="current-year"></span> The Desert Guy. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 
-    <script>
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
-        const message = document.getElementById('message');
-        const heartsContainer = document.getElementById('hearts');
-        const container = document.querySelector('.container');
-        
-        let noBtnPosition = 0;
-        const runAwayDistance = 150;
-        
-        // Initial position for No button
-        positionNoButton();
-        
-        noBtn.addEventListener('mouseover', () => {
-            // Move the button in a random direction when hovered
-            noBtnPosition = (noBtnPosition + 1) % 4;
-            positionNoButton();
-        });
-        
-        noBtn.addEventListener('click', (e) => {
-            // Prevent clicking and run away again
-            e.preventDefault();
-            noBtnPosition = (noBtnPosition + 1) % 4;
-            positionNoButton();
-            alert("Oh no you don't! Try the other button! 😜");
-        });
-        
-        yesBtn.addEventListener('click', () => {
-            // Hide buttons and show message
-            yesBtn.classList.add('hidden');
-            noBtn.classList.add('hidden');
-            message.classList.remove('hidden');
-            
-            // Create lots of hearts
-            createHearts(20);
-        });
-        
-        function positionNoButton() {
-            const containerRect = container.getBoundingClientRect();
-            const containerWidth = containerRect.width;
-            const containerHeight = containerRect.height;
-            
-            let left, top;
-            
-            switch(noBtnPosition) {
-                case 0: // Top left
-                    left = 50;
-                    top = 100;
-                    break;
-                case 1: // Top right
-                    left = containerWidth - 150;
-                    top = 100;
-                    break;
-                case 2: // Bottom left
-                    left = 50;
-                    top = containerHeight - 100;
-                    break;
-                case 3: // Bottom right
-                    left = containerWidth - 150;
-                    top = containerHeight - 100;
-                    break;
-            }
-            
-            noBtn.style.left = `${left}px`;
-            noBtn.style.top = `${top}px`;
-        }
-        
-        function createHearts(count) {
-            for (let i = 0; i < count; i++) {
-                setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.innerHTML = '❤️';
-                    heart.classList.add('heart');
-                    
-                    // Random position
-                    const x = Math.random() * 100;
-                    const delay = Math.random() * 2;
-                    
-                    heart.style.left = `${x}%`;
-                    heart.style.bottom = '0';
-                    heart.style.animationDelay = `${delay}s`;
-                    
-                    heartsContainer.appendChild(heart);
-                    
-                    // Remove heart after animation
-                    setTimeout(() => {
-                        heart.remove();
-                    }, 3000);
-                }, i * 300);
-            }
-        }
-    </script>
+    <!-- Quote Modal -->
+    <div class="modal" id="quote-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-quote">
+                <i class="fas fa-quote-left"></i>
+                <p id="modal-quote-text"></p>
+                <p id="modal-quote-author"></p>
+            </div>
+        </div>
+    </div>
 
-    <link rel="canonical" href="https://xrqzp.github.io/nanamylove/" />
+    <script src="script.js"></script>
 </body>
 </html>
